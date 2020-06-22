@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_weekly_goals"
+            android:title="@string/weekly_goals">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_roles_and_goals"
+                        android:icon="@drawable/ic_event_note_black_24dp"
+                        android:title="@string/roles_and_goals" />
+
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/item_daily_schedule"
+            android:title="@string/daily_schedule">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_monday"
+                        android:icon="@drawable/ic_monday"
+                        android:title="@string/default_senin" />
+                    <item
+                        android:id="@+id/nav_tuesday"
+                        android:icon="@drawable/ic_tuesday"
+                        android:title="@string/default_selasa" />
+                    <item
+                        android:id="@+id/nav_wednesday"
+                        android:icon="@drawable/ic_wednesday"
+                        android:title="@string/default_rabu" />
+                    <item
+                        android:id="@+id/nav_thursday"
+                        android:icon="@drawable/ic_thursday"
+                        android:title="@string/default_kamis" />
+                    <item
+                        android:id="@+id/nav_friday"
+                        android:icon="@drawable/ic_friday"
+                        android:title="@string/default_jumat" />
+                    <item
+                        android:id="@+id/nav_saturday"
+                        android:icon="@drawable/ic_saturday"
+                        android:title="@string/default_sabtu" />
+                    <item
+                        android:id="@+id/nav_sunday"
+                        android:icon="@drawable/ic_sunday"
+                        android:title="@string/default_minggu" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

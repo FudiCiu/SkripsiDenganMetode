@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HH:mm"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/arimo"
+            android:minLines="1"
+            android:text="Roles : Goals" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

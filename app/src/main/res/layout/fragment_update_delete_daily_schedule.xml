@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".controller.UpdateDeleteDailyScheduleController">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/lblDay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Day"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/txtDay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Day"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/lblDay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/lblTime"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Time"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtDay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="HH:MM"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/btnSetTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTime"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSetTime"/>
+
+    <Button
+        android:id="@+id/btnSetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Time"
+        app:layout_constraintTop_toTopOf="@id/txtTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/lblPlace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Place"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <EditText
+        android:id="@+id/edtPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblPlace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Type Place Here"
+        />
+    <TextView
+        android:id="@+id/lblActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Activity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edtPlace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/txtActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Roles: Goals"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/lblActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSetActivity"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:id="@+id/btnSetActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtActivity" />
+    <TextView
+        android:id="@+id/lblAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Alarm"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/spnJenisAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/jenis_alarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblAlarm" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="16dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnJenisAlarm" />
+</androidx.constraintlayout.widget.ConstraintLayout>

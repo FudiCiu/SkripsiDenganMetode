@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".controller.UpdateDeleteRolesAndGoalsController">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtRolesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/roles"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/edtRoles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:hint="Type Roles Here"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRolesTitle" />
+    <TextView
+        android:id="@+id/txtGoalsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Goals"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/edtRoles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+
+        />
+
+    <EditText
+        android:id="@+id/edtGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Type Goals Of The Roles Here"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGoalsTitle" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginHorizontal="64dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtGoals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
