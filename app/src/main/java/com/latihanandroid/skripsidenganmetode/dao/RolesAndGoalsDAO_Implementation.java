@@ -97,9 +97,17 @@ public class RolesAndGoalsDAO_Implementation implements RolesAndGoalsDAO {
     }
     public long deleteRolesAndGoals(RolesAndGoals rolesAndGoals){
         SQLiteDatabase database=helper.getWritableDatabase();
-        long deletedCount= database.delete(RolesAndGoals.TABLE_NAME,RolesAndGoals.ID_COLUMN+" =?",
-                new String[]{String.valueOf(rolesAndGoals.getId())});
-        database.close();
-        return deletedCount;
+        Cursor cursor=database.query(DailySchedule.TABLE_NAME,null,DailySchedule.AKTIVITAS_COLUMN+"=? ",new String[]{String.valueOf(rolesAndGoals.getId())},
+                null,
+                null,DailySchedule.ID_COLUMN);
+        if (cursor.moveToFirst()){
+            database.close();
+            return -1;
+        }else {
+            long deletedCount= database.delete(RolesAndGoals.TABLE_NAME,RolesAndGoals.ID_COLUMN+" =?",
+                    new String[]{String.valueOf(rolesAndGoals.getId())});
+            database.close();
+            return deletedCount;
+        }
     }
 }

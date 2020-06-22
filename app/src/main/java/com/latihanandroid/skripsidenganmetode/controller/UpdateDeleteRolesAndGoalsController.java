@@ -101,8 +101,8 @@ public class UpdateDeleteRolesAndGoalsController extends BaseController
                 if (deletedCount>0){
                     Toast.makeText(getContext(), "Roles and goals with id "+rolesAndGoalsBefore.getId()+" deleted", Toast.LENGTH_SHORT).show();
                     goBack();
-                }else {
-                    Toast.makeText(getContext(), "Failed to delete data", Toast.LENGTH_SHORT).show();
+                }else if (deletedCount==-1){
+                    Toast.makeText(getContext(), "Failed to delete data. There is another data using this data", Toast.LENGTH_SHORT).show();
                 }
             }
 
